@@ -1,0 +1,281 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+    background-image: url('загруженное.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fdfaf5;
+  }
+  
+  .wed {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: rgba(255, 250, 240, 0.75);
+  }
+  
+  header {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 13px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #d3b673;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(160, 130, 60, 0.15);
+  }
+  
+  header h3 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 48px;
+    color: #b08a36;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    color: #b5974b;
+    margin: 10px 0;
+  }
+  
+  .wedding-date {
+    font-size: 20px;
+    color: #a88c44;
+    margin-bottom: 10px;
+  }
+  
+  /* Flex контейнер для календаря и места */
+  .header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  /* Календарь */
+  .calendar {
+    flex: 1;
+    min-width: 250px;
+    background-color: #fffaf2;
+    border: 1px solid #d3b673;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(160, 130, 60, 0.15);
+  }
+  
+  .calendar-header {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #a88c44;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    font-size: 14px;
+    color: #6b5833;
+  }
+  
+  .calendar-grid span {
+    padding: 6px;
+    border-radius: 6px;
+  }
+  
+  .calendar-grid .highlight {
+    background-color: #ffe9b5;
+    color: #b08a36;
+    font-weight: bold;
+  }
+  
+  /* Место проведения */
+  .location {
+    flex: 1;
+    min-width: 200px;
+    font-size: 16px;
+    color: #6b5833;
+    padding: 15px;
+    background-color: #fffaf2;
+    border-radius: 10px;
+    border: 1px solid #d3b673;
+    box-shadow: 0 2px 4px rgba(160, 130, 60, 0.15);
+    margin-top: 15px;
+  }
+  
+  .location p {
+    margin: 0 0 5px;
+    font-weight: bold;
+    color: #9c7c34;
+  }
+  
+  .location a {
+    color: #b08a36;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .location a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Контейнер для основного контента */
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #d3b673;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(160, 130, 60, 0.15);
+  }
+  
+  /* Формы */
+  #form-section, #invitation-section {
+    background-color: #fffaf2;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(160, 130, 60, 0.1);
+    margin-top: 20px;
+  }
+  
+  #form-section h2,
+  #invitation-section h2 {
+    font-size: 24px;
+    color: #9c7c34;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #6b5833;
+    text-align: left;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[name="songChoice"] {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #cbb477;
+    background-color: #fffdf8;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input::placeholder {
+    color: #b4a774;
+    font-style: italic;
+  }
+  
+  button {
+    padding: 14px 24px;
+    background-color: #d4b356;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a7893e;
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: #b08a36;
+    margin-bottom: 10px;
+  }
+  p{
+    font-size: 18px;
+  }
+  fieldset {
+    border: none;
+    padding: 10px;
+    background-color: #fdf8ee;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  }
+  
+  legend {
+    font-weight: bold;
+    color: #856a2d;
+    margin-bottom: 8px;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    header h1 {
+      font-size: 30px;
+    }
+  
+    header h3 {
+      font-size: 36px;
+    }
+  
+    button {
+      font-size: 15px;
+      padding: 12px 20px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .header-info {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .calendar,
+    .location {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 24px;
+    }
+  
+    header h3 {
+      font-size: 28px;
+    }
+  
+    .wedding-date {
+      font-size: 16px;
+    }
+  
+    #form-section h2,
+    #invitation-section h2 {
+      font-size: 20px;
+    }
+  
+    input,
+    button {
+      font-size: 14px;
+    }
+  }
+  

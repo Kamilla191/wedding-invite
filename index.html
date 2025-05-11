@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Свадебное приглашение</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wed">
+
+    <!-- ХЕДЕР: перемещен ВНЕ container -->
+    <header>
+      <h3>Wedding day</h3>
+      <h1>Камилла & Владлен</h1>
+      <div class="header-info">
+        <!-- Календарь слева -->
+        <div class="calendar">
+            <div class="calendar-header">Август 2025</div>
+            <div class="calendar-grid">
+              <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+              <span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span>
+              <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+              <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
+              <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+              <span>25</span><span>26</span><span>27</span><span>28</span><span class="highlight">29 💕</span><span>30</span><span>31</span>
+            </div>
+          </div>
+          
+    
+        <!-- Место проведения справа -->
+        <div class="location">
+          <p>Место проведения:</p>
+          <a href="https://maps.app.goo.gl/irEh7nnu8Ht4Es6k8" target="_blank">Uzum fermer</a> <br> </br>
+          <p>❗Обратите внимание: церемония и празднование будут проходить на открытом газоне. <br><br> 📌Пожалуйста, выберите удобную обувь без каблуков, подходящую для прогулки по траве.</p></br>
+        </div>
+      </div>
+</header>
+    </header>
+
+    <div class="container">
+
+            <!-- ФОРМА: Страница 1 -->
+        <div id="form-section">
+            <h2>Уважаемый гость, заполните ваши данные</h2>
+            <form id="guestForm">
+            <label for="guestName">Ваше имя*</label>
+            <input type="text" id="guestName" name="guestName" required />
+        
+            <label for="guestPhone">Номер телефона</label>
+            <input type="tel" id="guestPhone" name="guestPhone" />
+        
+            <button type="submit">Сохранить</button>
+            </form>
+        </div>
+        
+        <!-- ПРИГЛАШЕНИЕ: Страница 2 -->
+        <div id="invitation-section" style="display: none;">
+            <form action="https://formspree.io/f/xwponraq" method="POST">
+            <label for="guestName2">Ваше имя*</label>
+            <input type="text" id="guestName2" name="Имя" required />
+        
+            <label for="guestPhone2">Номер телефона</label>
+            <input type="tel" id="guestPhone2" name="Телефон" />
+            <!-- Персональное приглашение -->
+            <h2 id="personalGreeting">Уважаемый(ая) гость(я)</h2>
+              <p>С радостью приглашаем вас на наше торжество, которое состоится
+                    <strong>29 августа 2025 года</strong>. Нам будет очень приятно видеть вас
+                    среди гостей в этот важный для нас день.
+                  </p>
+            <h3>Выберите, пожалуйста, меню:</h3>
+        
+            <fieldset>
+                <legend>Первое блюдо:</legend>
+                <label><input type="checkbox" name="Первое блюдо" value="Грибной крем-суп" /> Грибной крем-суп</label><br/>
+                <label><input type="checkbox" name="Первое блюдо" value="Куриная лапша" /> Куриная лапша</label>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Второе блюдо:</legend>
+                <label><input type="checkbox" name="Второе блюдо" value="Телятина с овощами" /> Телятина с овощами</label><br/>
+                <label><input type="checkbox" name="Второе блюдо" value="Форель" /> Форель</label>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Гарнир:</legend>
+                <label><input type="checkbox" name="Гарнир" value="Рис" /> Рис</label><br/>
+                <label><input type="checkbox" name="Гарнир" value="Картофель фри/дольки" /> Картофель фри / дольки</label>
+            </fieldset>
+        
+            <h3>Укажите песню, которую обязательно хотите услышать на вечере:</h3>
+            <input type="text" name="Песня" placeholder="Например: Imagine Dragons – Believer" />
+        
+            <br /><br />
+            <button type="submit">Отправить</button>
+            </form>
+        </div>  
+    </div> <!-- конец .container -->
+  </div> <!-- конец .wed -->
+
+  <script>
+    const form = document.getElementById("guestForm");
+    const formSection = document.getElementById("form-section");
+    const invitationSection = document.getElementById("invitation-section");
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Останавливаем отправку формы
+  
+      const name = document.getElementById("guestName").value.trim();
+      const phone = document.getElementById("guestPhone").value.trim();
+  
+      if (name !== "") {
+        // Подставляем значения во вторую форму
+        document.getElementById("guestName2").value = name;
+        document.getElementById("guestPhone2").value = phone;
+  
+        // Показываем вторую часть
+        formSection.style.display = "none";
+        invitationSection.style.display = "block";
+      }
+    });
+  </script>
+  
+</body>
+</html>
